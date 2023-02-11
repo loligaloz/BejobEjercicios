@@ -80,7 +80,7 @@ body {
 }
 
 
-.formulario__oligatorio-activo {
+.formulario__obligatorio-activo {
     display: block;
     color: red;
 }

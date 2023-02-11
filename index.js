@@ -60,7 +60,6 @@ const validamosCampos = function (expresiones_Regulares, input, campos) {
         document.getElementById(`campo_${campos}`).classList.remove('formulario__campos-ok');
         document.querySelector(`#campo_${campos} .formulario_validacion`).src='./imagenes/error-icon.svg';
         document.querySelector(`#campo_${campos} .formulario__error`).classList.add('formulario__error-activo');
-        document.querySelector(`#campo_${campos} .formulario__obligatorio`).classList.add('formulario__obligatorio-activo');
         campos_form[campos] = false;
     }
 }
@@ -110,6 +109,7 @@ formu.addEventListener('submit', function(e) {
         alert('La inscripcion ha sido correcta');
 
         //quitamos el diseño al reiniciar el formulario
+
         document.getElementById('campo_nombre').classList.remove('formulario__campos-ok');
         document.getElementById('campo_email').classList.remove('formulario__campos-ok');
         document.getElementById('campo_clave').classList.remove('formulario__campos-ok');
@@ -122,6 +122,8 @@ formu.addEventListener('submit', function(e) {
         validamosCampos(expresiones_Regulares.email, document.getElementById(`campo_email`), 'email');
         validamosCampos(expresiones_Regulares.clave, document.getElementById(`campo_clave`), 'clave');
         validamosCampos(expresiones_Regulares.clave, document.getElementById(`campo_clave2`), 'clave2');
+
+        
     }
 
 
