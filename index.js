@@ -16,8 +16,9 @@ const campos_form = {
     nombre: false,
     email: false,
     clave: false,
-    //clave2: false
+    clave2: false
 }
+
 
 //validar los inpusts formularios 
 
@@ -81,7 +82,7 @@ const validamosClave2  = function() {
 
 
 
-//comprobar cuando se escriba en el formluario y cuadno ya no se escriba
+//comprobar cuando se escriba en el formluario y cuando ya no se escriba para validar el formulario entonces
 inputs.forEach( function(input) {
     input.addEventListener('keyup', validarForm);
     input.addEventListener('blur', validarForm);
@@ -94,14 +95,10 @@ formulario.addEventListener('submit', function(e) {
         e.preventDefault();  //esto lo hago para que no se envie el formulario hasta que esten todos los inputs rellenos, queda bloqueado
     
 
-    if (campos_form.nombre.value && campos_form.email.value && campos_form.clave.value && campos_form.clave2.value ) {
-         formulario.reset();
-         alert('La inscription ha sido rellena correctamentee')
-    } 
+    if (campos_form.nombre && campos_form.email && campos_form.clave && campos_form.clave2 ) {
+         formu.reset();
+         alert('La inscription ha sido rellena correctamentee');
+    }
         
     
 });
-  
-
-
-
