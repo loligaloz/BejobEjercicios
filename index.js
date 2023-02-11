@@ -105,10 +105,16 @@ formu.addEventListener('submit', function(e) {
         
     
     if (campos_form.nombre && campos_form.email && campos_form.clave && campos_form.clave2 ) {
-        formu.reset();
+        formu.reset(); //para vaciar el formulario
 
         alert('La inscripcion ha sido correcta');
-        
+
+        //quitamos el diseño al reiniciar el formulario
+        document.getElementById('campo_nombre').classList.remove('formulario__campos-ok');
+        document.getElementById('campo_email').classList.remove('formulario__campos-ok');
+        document.getElementById('campo_clave').classList.remove('formulario__campos-ok');
+        document.getElementById('campo_clave2').classList.remove('formulario__campos-ok');
+
     } else {
         alert('Por favor, rellene todos los campos');
         //En estas lineas validamos cuales son los campos que estan vacioes o no cumples con las validaciones
