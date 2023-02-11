@@ -19,41 +19,49 @@
             <div class="formulario__campos" id="campo_nombre">
                 <label for="nombre" class="formulario_label">Nombre </label>
                 <div class="formulario__input">
-                    <input class="control" type="text" name="nombre" id="nombre" value="" required>
-                    <img src="" id="img-form" class="formulario_validacion">
+                    <input class="control" type="text" name="nombre" id="nombre" value="" >
+                    <img src="" class="formulario_validacion">
                 </div>
                 <p class="formulario__error">Usa solo caracteres</p>
-                <p class="formulario__oligatorio">Rellena este campo</p>
+                <div class="formulario__obligatorio" id="obligatorio__nombre">
+                    <p>Rellena este campo</p>
+                </div>
             </div>
             <!--Email-->
             <div class="formulario__campos" id="campo_email">
                 <label for="email" class="formulario_label">Email </label>
                 <div class="formulario__input">
-                    <input class="control" type="email" name="email" id="email" value="" required>
+                    <input class="control" type="email" name="email" id="email" value="" >
                     <img src="" class="formulario_validacion">
                 </div>
                 <p class="formulario__error">Email invalido</p>
-                <p class="formulario__oligatorio">Rellena este campo</p>
+                <div class="formulario__obligatorio" id="obligatorio__email">
+                    <p>Rellena este campo</p>
+                </div>
             </div>
             <!--Contraseña-->
             <div class="formulario__campos" id="campo_clave">
                 <label for="clave" class="formulario_label">Contraseña </label>
                 <div class="formulario__input">
-                    <input class="control" type="password" name="clave" id="clave" value="" required>
+                    <input class="control" type="password" name="clave" id="clave" value="" >
                     <img src="" class="formulario_validacion">
                 </div>
                 <p class="formulario__error">No puede tener mas de 8 caracteres</p>
-                <p class="formulario__oligatorio">Rellena este campo</p>
+                <div class="formulario__obligatorio" id="obligatorio__clave">
+                    <p>Rellena este campo</p>
+                </div>
             </div>
             <!--Validar Contraseña-->
             <div class="formulario__campos" id="campo_clave2">
                 <label for="clave2" class="formulario_label">Confirmar Contraseña </label>
                 <div class="formulario__input">
-                    <input class="control" type="password" name="clave2" id="clave2" value="" required>
+                    <input class="control" type="password" name="clave2" id="clave2" value="" >
                     <img src="" class="formulario_validacion">
                 </div>
                 <p class="formulario__error">Las contraseñas no coinciden</p>
-                <p class="formulario__oligatorio">Rellena este campo</p>
+                <div class="formulario__obligatorio" id="obligatorio__clave2">
+                    <p>Rellena este campo</p>
+                </div>
             </div>            
             <!--Enviar formulario-->
             <div class="formulario__campos formulario__btn-envi">
@@ -67,4 +75,5 @@
 
 </body>
 </html>
+
 
