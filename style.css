@@ -74,15 +74,18 @@ body {
 }
 
 /*-- Diseño del mensaje de que es obligatorio rellenar todos los inputs --*/
-.formulario__oligatorio {
+.formulario__obligatorio  {
     margin-bottom: 0;
     display: none;
+    color: red;
 }
+
 
 .formulario__oligatorio-activo {
     display: block;
-    color: red;
 }
+
+
 
 /*-- Diseño de los iconos de validacion --*/
 .formulario_validacion {
