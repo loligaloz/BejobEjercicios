@@ -75,7 +75,7 @@ const validamosClave2  = function() {
         document.getElementById(`campo_clave2`).classList.add('formulario__campos-ok');
         document.querySelector(`#campo_clave2 .formulario_validacion`).src='./imagenes/success-icon.svg';
         document.querySelector(`#campo_clave2 .formulario__error`).classList.remove('formulario__error-activo');
-        campos_form['clave'] = true;
+        campos_form['clave2'] = true;
     }
 }
 
