@@ -70,11 +70,13 @@ const validamosClave2  = function() {
         document.querySelector(`#campo_clave2 .formulario_validacion`).src='./imagenes/error-icon.svg';
         document.querySelector(`#campo_clave2 .formulario__error`).classList.add('formulario__error-activo');
         campos_form['clave'] = false;
+        campos_form['clave2'] = false;
     } else {
         document.getElementById(`campo_clave2`).classList.remove('formulario__campos-mal');
         document.getElementById(`campo_clave2`).classList.add('formulario__campos-ok');
         document.querySelector(`#campo_clave2 .formulario_validacion`).src='./imagenes/success-icon.svg';
         document.querySelector(`#campo_clave2 .formulario__error`).classList.remove('formulario__error-activo');
+        campos_form['clave'] = true;
         campos_form['clave2'] = true;
     }
 }
@@ -91,14 +93,20 @@ inputs.forEach( function(input) {
 
 
 
-formulario.addEventListener('submit', function(e) {
+formu.addEventListener('submit', function(e) {
         e.preventDefault();  //esto lo hago para que no se envie el formulario hasta que esten todos los inputs rellenos, queda bloqueado
     
-
     if (campos_form.nombre && campos_form.email && campos_form.clave && campos_form.clave2 ) {
-         formu.reset();
-         alert('La inscription ha sido rellena correctamentee');
-    }
-        
+        formu.reset();
+
+        alert('La inscripcion ha sido rellenado correctamente');
+        document.querySelector(`#campos_${campos} .formulario_validacion`).classList.remove('formulario__campos-ok');
     
+    } else {
+        alert('Por favor, rellene todos los campos');
+    }
+
+
 });
+  
+
