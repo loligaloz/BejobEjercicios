@@ -35,6 +35,7 @@ const validarForm = function(e) {
             validamosClave2();
         break;
         case "clave2":
+            validamosCampos(expresiones_Regulares.clave, e.target, 'clave2');
             validamosClave2();
         break;
    }
@@ -47,13 +48,14 @@ const validamosCampos = function (expresiones_Regulares, input, campos) {
         document.getElementById(`campo_${campos}`).classList.add('formulario__campos-mal');
         document.getElementById(`campo_${campos}`).classList.remove('formulario__campos-ok');
         document.querySelector(`#campo_${campos} .formulario_validacion`).src='./imagenes/error-icon.svg';
-        document.querySelector(`#campo_${campos} .formulario__obligatorio`).classList.add('formulario__obligatorio-activo'); //activar el mensaje de error 
+        document.querySelector(`#campo_${campos} .formulario__obligatorio`).classList.add('formulario__obligatorio-activo'); //activar el mensaje de error
         campos_form[campos] = false;
     }else if (expresiones_Regulares.test(input.value)){
         document.getElementById(`campo_${campos}`).classList.remove('formulario__campos-mal');
         document.getElementById(`campo_${campos}`).classList.add('formulario__campos-ok');
         document.querySelector(`#campo_${campos} .formulario_validacion`).src='./imagenes/success-icon.svg';
         document.querySelector(`#campo_${campos} .formulario__error`).classList.remove('formulario__error-activo');
+        document.querySelector(`#campo_${campos} .formulario__obligatorio`).classList.remove('formulario__obligatorio-activo'); 
         campos_form[campos] = true;
     } else {
         document.getElementById(`campo_${campos}`).classList.add('formulario__campos-mal');
@@ -75,6 +77,7 @@ const validamosClave2  = function() {
         document.getElementById(`campo_clave2`).classList.remove('formulario__campos-ok');
         document.querySelector(`#campo_clave2 .formulario_validacion`).src='./imagenes/error-icon.svg';
         document.querySelector(`#campo_clave2 .formulario__error`).classList.add('formulario__error-activo');
+        
         campos_form['clave'] = false;
         campos_form['clave2'] = false;
     } else {
@@ -82,6 +85,7 @@ const validamosClave2  = function() {
         document.getElementById(`campo_clave2`).classList.add('formulario__campos-ok');
         document.querySelector(`#campo_clave2 .formulario_validacion`).src='./imagenes/success-icon.svg';
         document.querySelector(`#campo_clave2 .formulario__error`).classList.remove('formulario__error-activo');
+        document.querySelector(`#campo_${campos} .formulario__obligatorio`).classList.remove('formulario__obligatorio-activo'); 
         campos_form['clave'] = true;
         campos_form['clave2'] = true;
     }
@@ -116,7 +120,6 @@ formu.addEventListener('submit', function(e) {
         document.getElementById('campo_clave2').classList.remove('formulario__campos-ok');
 
     } else {
-        alert('Por favor, rellene todos los campos');
         //En estas lineas validamos cuales son los campos que estan vacioes o no cumples con las validaciones
         validamosCampos(expresiones_Regulares.nombre, document.getElementById(`campo_nombre`), 'nombre');
         validamosCampos(expresiones_Regulares.email, document.getElementById(`campo_email`), 'email');
