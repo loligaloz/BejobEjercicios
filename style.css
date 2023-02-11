@@ -77,12 +77,12 @@ body {
 .formulario__obligatorio  {
     margin-bottom: 0;
     display: none;
-    color: red;
 }
 
 
 .formulario__oligatorio-activo {
     display: block;
+    color: red;
 }
 
 

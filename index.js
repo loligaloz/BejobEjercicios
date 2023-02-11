@@ -47,7 +47,7 @@ const validamosCampos = function (expresiones_Regulares, input, campos) {
         document.getElementById(`campo_${campos}`).classList.add('formulario__campos-mal');
         document.getElementById(`campo_${campos}`).classList.remove('formulario__campos-ok');
         document.querySelector(`#campo_${campos} .formulario_validacion`).src='./imagenes/error-icon.svg';
-        document.querySelector(`#campo_${campos} .formulario__obligatorio`).classList.add('formulario__obligatorio-activo');
+        document.querySelector(`#campo_${campos} .formulario__obligatorio`).classList.add('formulario__obligatorio-activo'); //activar el mensaje de error 
         campos_form[campos] = false;
     }else if (expresiones_Regulares.test(input.value)){
         document.getElementById(`campo_${campos}`).classList.remove('formulario__campos-mal');
@@ -60,6 +60,7 @@ const validamosCampos = function (expresiones_Regulares, input, campos) {
         document.getElementById(`campo_${campos}`).classList.remove('formulario__campos-ok');
         document.querySelector(`#campo_${campos} .formulario_validacion`).src='./imagenes/error-icon.svg';
         document.querySelector(`#campo_${campos} .formulario__error`).classList.add('formulario__error-activo');
+        document.querySelector(`#campo_${campos} .formulario__obligatorio`).classList.add('formulario__obligatorio-activo');
         campos_form[campos] = false;
     }
 }
@@ -106,8 +107,8 @@ formu.addEventListener('submit', function(e) {
     if (campos_form.nombre && campos_form.email && campos_form.clave && campos_form.clave2 ) {
         formu.reset();
 
-        alert('La inscripcion ha sido rellenado correctamente');
-        document.querySelector(`#campos_${campos} .formulario_validacion`).classList.remove('.formulario__campos-ok');
+        alert('La inscripcion ha sido correcta');
+        
     } else {
         alert('Por favor, rellene todos los campos');
         //En estas lineas validamos cuales son los campos que estan vacioes o no cumples con las validaciones
