@@ -132,10 +132,10 @@ formu.addEventListener('submit', function(e) {
 
     } else {
         //En estas lineas validamos cuales son los campos que estan vacioes o no cumples con las validaciones
-        validamosCampos(expresiones_Regulares.nombre, document.getElementById('campo_nombre'), 'nombre');
-        validamosCampos(expresiones_Regulares.email, document.getElementById('campo_email'), 'email');
-        validamosCampos(expresiones_Regulares.clave, document.getElementById('campo_clave'), 'clave');
-        validamosCampos(expresiones_Regulares.clave, document.getElementById('campo_clave2'), 'clave2');
+        validamosCampos(expresiones_Regulares.nombre, document.getElementById('nombre'), 'nombre');
+        validamosCampos(expresiones_Regulares.email, document.getElementById('email'), 'email');
+        validamosCampos(expresiones_Regulares.clave, document.getElementById('clave'), 'clave');
+        validamosCampos(expresiones_Regulares.clave, document.getElementById('clave2'), 'clave2');
 
         
     }
