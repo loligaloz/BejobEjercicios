@@ -35,8 +35,7 @@ const validarForm = function(e) {
             validamosClave2();
         break;
         case "clave2":
-            validamosCampos(expresiones_Regulares.clave, e.target, 'clave2');
-            validamosClave2();
+             validamosClave2();
         break;
    }
 }
@@ -117,6 +116,8 @@ formu.addEventListener('submit', function(e) {
         document.getElementById('campo_email').classList.remove('formulario__campos-ok');
         document.getElementById('campo_clave').classList.remove('formulario__campos-ok');
         document.getElementById('campo_clave2').classList.remove('formulario__campos-ok');
+
+       
 
     } else {
         //En estas lineas validamos cuales son los campos que estan vacioes o no cumples con las validaciones
