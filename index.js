@@ -77,7 +77,6 @@ const validamosClave2  = function() {
         document.getElementById(`campo_clave2`).classList.remove('formulario__campos-ok');
         document.querySelector(`#campo_clave2 .formulario_validacion`).src='./imagenes/error-icon.svg';
         document.querySelector(`#campo_clave2 .formulario__error`).classList.add('formulario__error-activo');
-        
         campos_form['clave'] = false;
         campos_form['clave2'] = false;
     } else {
@@ -85,7 +84,7 @@ const validamosClave2  = function() {
         document.getElementById(`campo_clave2`).classList.add('formulario__campos-ok');
         document.querySelector(`#campo_clave2 .formulario_validacion`).src='./imagenes/success-icon.svg';
         document.querySelector(`#campo_clave2 .formulario__error`).classList.remove('formulario__error-activo');
-        document.querySelector(`#campo_${campos} .formulario__obligatorio`).classList.remove('formulario__obligatorio-activo'); 
+        document.querySelector(`#campo_clave2 .formulario__obligatorio`).classList.remove('formulario__obligatorio-activo'); 
         campos_form['clave'] = true;
         campos_form['clave2'] = true;
     }
