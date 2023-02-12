@@ -10,7 +10,7 @@ const expresiones_Regulares = {
     clave: /^.{1,8}$/,
 }
 
-//campos validos o no
+//campos validos o no, si estan vacios o no los campos de los inputs
 
 const campos_form = {
     nombre: false,
@@ -46,20 +46,20 @@ const validamosCampos = function (expresiones_Regulares, input, campos) {
     if (!input.value || input.value == '') { //en este primer if verificamos que el valor del if no este vacio
         document.getElementById(`campo_${campos}`).classList.add('formulario__campos-mal');
         document.getElementById(`campo_${campos}`).classList.remove('formulario__campos-ok');
-        document.querySelector(`#campo_${campos} .formulario_validacion`).src='./imagenes/error-icon.svg';
+        document.querySelector(`#campo_${campos} .formulario_validacion`).src='./images/error-icon.svg';
         document.querySelector(`#campo_${campos} .formulario__obligatorio`).classList.add('formulario__obligatorio-activo'); //activar el mensaje de error
         campos_form[campos] = false;
-    }else if (expresiones_Regulares.test(input.value)){
+    } else if (expresiones_Regulares.test(input.value)){
         document.getElementById(`campo_${campos}`).classList.remove('formulario__campos-mal');
         document.getElementById(`campo_${campos}`).classList.add('formulario__campos-ok');
-        document.querySelector(`#campo_${campos} .formulario_validacion`).src='./imagenes/success-icon.svg';
+        document.querySelector(`#campo_${campos} .formulario_validacion`).src='./images/success-icon.svg';
         document.querySelector(`#campo_${campos} .formulario__error`).classList.remove('formulario__error-activo');
         document.querySelector(`#campo_${campos} .formulario__obligatorio`).classList.remove('formulario__obligatorio-activo'); 
         campos_form[campos] = true;
     } else {
         document.getElementById(`campo_${campos}`).classList.add('formulario__campos-mal');
         document.getElementById(`campo_${campos}`).classList.remove('formulario__campos-ok');
-        document.querySelector(`#campo_${campos} .formulario_validacion`).src='./imagenes/error-icon.svg';
+        document.querySelector(`#campo_${campos} .formulario_validacion`).src='./images/error-icon.svg';
         document.querySelector(`#campo_${campos} .formulario__error`).classList.add('formulario__error-activo');
         campos_form[campos] = false;
     }
@@ -71,17 +71,24 @@ const validamosClave2  = function() {
     const inputClave1 = document.getElementById('clave');
     const inputClave2 = document.getElementById('clave2');
 
-    if (inputClave1.value !== inputClave2.value) {
+    if (!inputClave2.value || inputClave2.value == '') { //en este primer if verificamos que el valor del if no este vacio
         document.getElementById(`campo_clave2`).classList.add('formulario__campos-mal');
         document.getElementById(`campo_clave2`).classList.remove('formulario__campos-ok');
-        document.querySelector(`#campo_clave2 .formulario_validacion`).src='./imagenes/error-icon.svg';
+        document.querySelector(`#campo_clave2 .formulario_validacion`).src='./images/error-icon.svg';
+        document.querySelector(`#campo_clave2 .formulario__obligatorio`).classList.add('formulario__obligatorio-activo'); //activar el mensaje de error
+        campos_form[campos] = false;
+    
+    } else if (inputClave1.value !== inputClave2.value) {
+        document.getElementById(`campo_clave2`).classList.add('formulario__campos-mal');
+        document.getElementById(`campo_clave2`).classList.remove('formulario__campos-ok');
+        document.querySelector(`#campo_clave2 .formulario_validacion`).src='./images/error-icon.svg';
         document.querySelector(`#campo_clave2 .formulario__error`).classList.add('formulario__error-activo');
         campos_form['clave'] = false;
         campos_form['clave2'] = false;
     } else {
         document.getElementById(`campo_clave2`).classList.remove('formulario__campos-mal');
         document.getElementById(`campo_clave2`).classList.add('formulario__campos-ok');
-        document.querySelector(`#campo_clave2 .formulario_validacion`).src='./imagenes/success-icon.svg';
+        document.querySelector(`#campo_clave2 .formulario_validacion`).src='./images/success-icon.svg';
         document.querySelector(`#campo_clave2 .formulario__error`).classList.remove('formulario__error-activo');
         document.querySelector(`#campo_clave2 .formulario__obligatorio`).classList.remove('formulario__obligatorio-activo'); 
         campos_form['clave'] = true;
