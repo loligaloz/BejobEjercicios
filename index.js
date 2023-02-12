@@ -124,7 +124,13 @@ formu.addEventListener('submit', function(e) {
         document.getElementById('campo_clave').classList.remove('formulario__campos-ok');
         document.getElementById('campo_clave2').classList.remove('formulario__campos-ok');
 
-       
+        //volver a dejar los valores de los input vacios
+        campos_form = {
+            nombre: false,
+            email: false,
+            clave: false,
+            clave2: false
+        }
 
     } else {
         //En estas lineas validamos cuales son los campos que estan vacioes o no cumples con las validaciones
