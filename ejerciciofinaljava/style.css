@@ -1,0 +1,115 @@
+/*-- Estilos generales --*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:border-box;
+}
+
+
+body {
+	font-family: "Open Sans", Arial, Sans-serif;
+	background-color: #0A122A;
+}
+
+/*-- diseño div contenedor del formulario --*/
+.contenedor {
+    width: 400px;
+    background-color: #0B243B;
+    padding: 30px;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 4px;
+    color: darkcyan;
+    border: 3px solid #0B4C5F;
+}
+
+/*--Diseño del titulo del formulario  --*/
+.contenedor h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/*-- diseño input del formulario --*/
+.control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 16px 0;
+    border: 2px solid #0B615E;
+}
+
+/*-- diseño del div que guarda el boton del formulario --*/
+.formulario__btn-envi button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: #819FF7;
+    color: white;
+    margin: 16px 0;
+    cursor: pointer;
+}
+
+/*-- Diseño del div que engloba el input y los iconos --*/
+.formulario__input {
+    position: relative;
+}
+
+/*-- Diseño del div que engloba el input y los iconos --*/
+.formulario_label {
+    display: block;
+}
+
+/*-- Diseño del mensaje de error al rellenar los inputs --*/
+.formulario__error {
+    margin-bottom: 0;
+    display: none;
+}
+
+.formulario__error-activo {
+    display: block;
+    color: red;
+}
+
+/*-- Diseño del mensaje de que es obligatorio rellenar todos los inputs --*/
+.formulario__obligatorio  {
+    margin-bottom: 0;
+    display: none;
+}
+
+
+.formulario__obligatorio-activo {
+    display: block;
+    color: red;
+}
+
+
+
+/*-- Diseño de los iconos de validacion --*/
+.formulario_validacion {
+    position: absolute;
+    right: 10px;
+    bottom: 27px;
+    z-index: 100;
+    opacity: 0;
+}
+
+/*-- Estilos validacion --*/
+.formulario__campos-ok .formulario_validacion {
+    opacity: 1;
+}
+
+.formulario__campos-ok .control {
+    border: 3px solid #1ed12d;
+}
+
+.formulario__campos-mal .control {
+    border: 3px solid #bb2929;
+}
+
+.formulario__campos-mal .formulario_validacion {
+    opacity: 1;
+}
+
