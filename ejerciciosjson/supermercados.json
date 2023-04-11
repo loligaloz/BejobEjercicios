@@ -1,0 +1,225 @@
+{
+    "Froiz": [
+        {
+            "nombre": "Froiz",
+            "direccion": "C/Resina, 16",
+            "codigoPostal": 40200,
+            "poblacion": "Cuéllar",
+            "provincia": "Segovia",
+            "geolocalizacion":  "41°23'55.3\"N 4°18'37.0\"W",
+            "productos": [
+                {
+                    "carniceria": [
+                        {
+                            "producto": "hamburguesa ternera gallega",
+                            "marca": "coren",
+                            "informacionProducto": {
+                                "unidades": 2,
+                                "formato": "envasado",
+                                "peso": 240,
+                                "unidadMedida": "gramos"
+                            },
+                            "precioVenta": 3.29,
+                            "ofertaVigente": false,
+                            "caduca": true,
+                            "adquirido": false
+                        },
+                        {
+                            "producto": "Codorniz",
+                            "marca": "coren",
+                            "informacionProducto": {
+                                "unidades": 4,
+                                "formato": "envasado",
+                                "peso": 450,
+                                "unidadMedida": "gramos"
+                            },
+                            "precioVenta": 7.50,
+                            "ofertaVigente": false, 
+                            "caduca": true, 
+                            "adquirido": true
+                        }
+                    ],
+                    "fruteria": [
+                        {
+                            "producto": "Freson tarrina",
+                            "marca": "froiz",
+                            "informacionProducto": {
+                                "unidades": "varias segun peso",
+                                "formato": "envasado",
+                                "peso": 500,
+                                "unidadMedida": "gramos"
+                            },
+                            "precioVenta": 1.79,
+                            "ofertaVigente": true,
+                            "caduca": true,
+                            "adquirido": false
+                        },
+                        {
+                            "producto": "Tomate cherry",
+                            "marca": "froiz",
+                            "informacionProducto": {
+                                "unidades": "varias segun peso",
+                                "formato": "envasado",
+                                "peso": 250,
+                                "unidadMedida": "gramos"
+                            },
+                            "precioVenta": 1.14,
+                            "ofertaVigente": false,
+                            "caduca": true,
+                            "adquirido": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "Carrefour Express": [
+        {
+            "nombre": "Carrefour express",
+            "direccion": "C/Sepulveda, 49",
+            "codigoPostal": 40320,
+            "poblacion": "Cantalejo",
+            "provincia": "Segovia",
+            "geolocalizacion":  "41°15'31.7\"N 3°55'17.3\"W",
+            "productos": [
+                {
+                    "carniceria": [
+                        {
+                            "producto": "lomo cerdo adobado",
+                            "marca": "carrefour",
+                            "informacionProducto": {
+                                "unidades": "varias segun peso",
+                                "formato": "envasado",
+                                "peso": 750,
+                                "unidadMedida": "gramos"
+                            },
+                            "precioVenta": 5.21,
+                            "ofertaVigente": false,
+                            "caduca": true,
+                            "adquirido": true
+                        },
+                        {
+                            "producto": "Pechuga de pollo marinada",
+                            "marca": "carrefour",
+                            "informacionProducto": {
+                                "unidades": "varias segun peso",
+                                "formato": "envasado",
+                                "peso": 500,
+                                "unidadMedida": "gramos"
+                            },
+                            "precioVenta": 3.77,
+                            "ofertaVigente": false, 
+                            "caduca": true, 
+                            "adquirido": false
+                        }
+                    ],
+                    "fruteria": [
+                        {
+                            "producto": "Uvas blancas sin pepitas",
+                            "marca": "carrefour",
+                            "informacionProducto": {
+                                "unidades": "varias segun peso",
+                                "formato": "envasado",
+                                "peso": 500,
+                                "unidadMedida": "gramos"
+                            },
+                            "precioVenta": 2.55,
+                            "ofertaVigente": true,
+                            "caduca": true,
+                            "adquirido": true
+                        },
+                        {
+                            "producto": "Moras",
+                            "marca": "carrefour",
+                            "informacionProducto": {
+                                "unidades": "varias segun peso",
+                                "formato": "envasado",
+                                "peso": 125,
+                                "unidadMedida": "gramos"
+                            },
+                            "precioVenta": 2.25,
+                            "ofertaVigente": false,
+                            "caduca": true,
+                            "adquirido": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "Mercadona": [
+        {
+            "nombre": "Mercadona",
+            "direccion": "Av. Camilo Jose Cela, 48",
+            "codigoPostal": 40200,
+            "poblacion": "Cuéllar",
+            "provincia": "Segovia",
+            "geolocalizacion":  "41°23'46.2\"N 4°18'28.5\"W",
+            "productos": [
+                {
+                    "carniceria": [
+                        {
+                            "producto": "preparado carne picada vacuno y cerdo",
+                            "marca": "costa brava",
+                            "informacionProducto": {
+                                "unidades": 1,
+                                "formato": "envasado",
+                                "peso": 500,
+                                "unidadMedida": "gramos"
+                            },
+                            "precioVenta": 3.80,
+                            "ofertaVigente": false,
+                            "caduca": true,
+                            "adquirido": true
+                        },
+                        {
+                            "producto": "Costillas cerdo",
+                            "marca": "costa brava",
+                            "informacionProducto": {
+                                "unidades": "varias segun peso",
+                                "formato": "envasado",
+                                "peso": 530,
+                                "unidadMedida": "gramos"
+                            },
+                            "precioVenta": 3.97,
+                            "ofertaVigente": false, 
+                            "caduca": true, 
+                            "adquirido": false
+                        }
+                    ],
+                    "fruteria": [
+                        {
+                            "producto": "Freson tarrina",
+                            "marca": "masia",
+                            "informacionProducto": {
+                                "unidades": "varias segun peso",
+                                "formato": "envasado",
+                                "peso": 500,
+                                "unidadMedida": "gramos"
+                            },
+                            "precioVenta": 1.70,
+                            "ofertaVigente": false,
+                            "caduca": true,
+                            "adquirido": true
+                        },
+                        {
+                            "producto": "Frambuesas",
+                            "marca": "berries delight",
+                            "informacionProducto": {
+                                "unidades": "varias segun peso",
+                                "formato": "envasado",
+                                "peso": 170,
+                                "unidadMedida": "gramos"
+                            },
+                            "precioVenta": 2.19,
+                            "ofertaVigente": false,
+                            "caduca": true,
+                            "adquirido": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+
+}

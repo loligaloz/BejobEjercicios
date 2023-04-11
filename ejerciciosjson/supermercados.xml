@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<supermercados>
+<Froiz>
+<direccion>C/Resina, 16</direccion>
+<codigoPostal>40200</codigoPostal>
+<poblacion>Cuéllar</poblacion>
+<provincia>Segovia</provincia>
+<geolocalizacion>
+    <norte>41°23'55.3</norte>
+    <sur></sur>
+    <este></este>
+    <oeste>4°18'37.0</oeste>
+</geolocalizacion>
+<productos>
+<carniceria>
+    <producto>Hamburguesa ternera gallega</producto>
+    <marca>coren</marca>
+    <informacionProducto>
+        <unidades>2</unidades>
+        <formato>envasado</formato>
+        <peso>240</peso>
+        <unidadMedida>gramos</unidadMedida>
+    </informacionProducto>
+    <precioVenta>3.29</precioVenta>
+    <ofertaVigente>false</ofertaVigente>
+    <caduca>true</caduca>
+    <adquirido>false</adquirido>
+</carniceria>
+<carniceria>
+    <producto>Codorniz</producto>
+    <marca>froiz</marca>
+    <informacionProducto>
+        <unidades>4</unidades>
+        <formato>envasado</formato>
+        <peso>450</peso>
+        <unidadMedida>gramos</unidadMedida>
+    </informacionProducto>
+    <precioVenta>7.50</precioVenta>
+    <ofertaVigente>false</ofertaVigente>
+    <caduca>true</caduca>
+    <adquirido>false</adquirido>
+</carniceria>
+<fruteria>
+    <producto>Freson tarrina</producto>
+    <marca>froiz</marca>
+    <informacionProducto>
+        <unidades>varia segun peso</unidades>
+        <formato>envasado</formato>
+        <peso>500</peso>
+        <unidadMedida>gramos</unidadMedida>
+    </informacionProducto>
+    <precioVenta>1.79</precioVenta>
+    <ofertaVigente>true</ofertaVigente>
+    <caduca>true</caduca>
+    <adquirido>false</adquirido>
+</fruteria>
+<fruteria>
+    <producto>Tomate cherry</producto>
+    <marca>froiz</marca>
+    <informacionProducto>
+        <unidades>varias segun peso</unidades>
+        <formato>envasado</formato>
+        <peso>250</peso>
+        <unidadMedida>gramos</unidadMedida>
+    </informacionProducto>
+    <precioVenta>1.14</precioVenta>
+    <ofertaVigente>false</ofertaVigente>
+    <caduca>true</caduca>
+    <adquirido>false</adquirido>
+</fruteria>
+</productos>
+</Froiz>
+<CarrefourExpress>
+<direccion>C/Sepulveda, 49</direccion>
+<codigoPostal>40322</codigoPostal>
+<poblacion>Cantalejo</poblacion>
+<provincia>Segovia</provincia>
+<geolocalizacion>
+    <norte>41°15'31.7</norte>
+    <sur></sur>
+    <este></este>
+    <oeste>3°55'17.3</oeste>
+</geolocalizacion>
+<productos>
+<carniceria>
+    <producto>Lomo cerdo adobado</producto>
+    <marca>carrefour</marca>
+    <informacionProducto>
+        <unidades>varias segun peso</unidades>
+        <formato>envasado</formato>
+        <peso>750</peso>
+        <unidadMedida>gramos</unidadMedida>
+    </informacionProducto>
+    <precioVenta>5.21</precioVenta>
+    <ofertaVigente>false</ofertaVigente>
+    <caduca>true</caduca>
+    <adquirido>true</adquirido>
+</carniceria>
+<carniceria>
+    <producto>Pechuga de pollo marinada</producto>
+    <marca>carrefour</marca>
+    <informacionProducto>
+        <unidades>varias segun peso</unidades>
+        <formato>envasado</formato>
+        <peso>500</peso>
+        <unidadMedida>gramos</unidadMedida>
+    </informacionProducto>
+    <precioVenta>3.77</precioVenta>
+    <ofertaVigente>false</ofertaVigente>
+    <caduca>true</caduca>
+    <adquirido>false</adquirido>
+</carniceria>
+<fruteria>
+    <producto>Uvas blancas sin pepitas</producto>
+    <marca>carrefour</marca>
+    <informacionProducto>
+        <unidades>varias segun peso</unidades>
+        <formato>envasado</formato>
+        <peso>500</peso>
+        <unidadMedida>gramos</unidadMedida>
+    </informacionProducto>
+    <precioVenta>2.55</precioVenta>
+    <ofertaVigente>true</ofertaVigente>
+    <caduca>true</caduca>
+    <adquirido>true</adquirido>
+</fruteria>
+<fruteria>
+    <producto>Moras</producto>
+    <marca>carrefour</marca>
+    <informacionProducto>
+        <unidades>varias segun peso</unidades>
+        <formato>envasado</formato>
+        <peso>125</peso>
+        <unidadMedida>gramos</unidadMedida>
+    </informacionProducto>
+    <precioVenta>2.25</precioVenta>
+    <ofertaVigente>false</ofertaVigente>
+    <caduca>true</caduca>
+    <adquirido>false</adquirido>
+</fruteria>
+</productos>
+</CarrefourExpress>
+<Mercadona>
+<direccion>Av. Camilo Jose Cela, 48</direccion>
+<codigoPostal>40200</codigoPostal>
+<poblacion>Cuéllar</poblacion>
+<provincia>Segovia</provincia>
+<geolocalizacion>
+    <norte>41°23'46.2</norte>
+    <sur></sur>
+    <este></este>
+    <oeste>4°18'28.5</oeste>
+</geolocalizacion>
+<productos>
+<carniceria>
+    <producto>Preparado carne picada vacuno y cerdo</producto>
+    <marca>costa brava</marca>
+    <informacionProducto>
+        <unidades>1</unidades>
+        <formato>envasado</formato>
+        <peso>500</peso>
+        <unidadMedida>gramos</unidadMedida>
+    </informacionProducto>
+    <precioVenta>3.80</precioVenta>
+    <ofertaVigente>false</ofertaVigente>
+    <caduca>true</caduca>
+    <adquirido>true</adquirido>
+</carniceria>
+<carniceria>
+    <producto>Costillas cerdo</producto>
+    <marca>costa brava</marca>
+    <informacionProducto>
+        <unidades>varias segun peso</unidades>
+        <formato>envasado</formato>
+        <peso>530</peso>
+        <unidadMedida>gramos</unidadMedida>
+    </informacionProducto>
+    <precioVenta>3.97</precioVenta>
+    <ofertaVigente>false</ofertaVigente>
+    <caduca>true</caduca>
+    <adquirido>false</adquirido>
+</carniceria>
+<fruteria>
+    <producto>Freson tarrina</producto>
+    <marca>masia</marca>
+    <informacionProducto>
+        <unidades>varias segun peso</unidades>
+        <formato>envasado</formato>
+        <peso>500</peso>
+        <unidadMedida>gramos</unidadMedida>
+    </informacionProducto>
+    <precioVenta>1.70</precioVenta>
+    <ofertaVigente>false</ofertaVigente>
+    <caduca>true</caduca>
+    <adquirido>true</adquirido>
+</fruteria>
+<fruteria>
+    <producto>Frambuesas</producto>
+    <marca>berries delight</marca>
+    <informacionProducto>
+        <unidades>varias segun peso</unidades>
+        <formato>envasado</formato>
+        <peso>170</peso>
+        <unidadMedida>gramos</unidadMedida>
+    </informacionProducto>
+    <precioVenta>2.19</precioVenta>
+    <ofertaVigente>false</ofertaVigente>
+    <caduca>true</caduca>
+    <adquirido>false</adquirido>
+</fruteria>
+</productos>
+</Mercadona>
+</supermercados>
