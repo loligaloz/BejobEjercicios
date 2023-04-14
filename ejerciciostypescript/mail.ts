@@ -1,4 +1,4 @@
-class mails {
+export class mails {
     //propiedades
 
     private _tipo: string;
@@ -10,22 +10,21 @@ class mails {
         this._direccion = direccion;
     }
 
-    //acesso
-    public get tipo() {
+
+    public get tipo():string {
         return this._tipo;
     }
     
-    public set tipo(tipo) {
+    public set tipo(tipo:string) {
         this._tipo = tipo;
     }
     
-    public get direccion() {
+    public get direccion():string {
         return this._direccion;
     }
 
-    public set direccion(direccion) {
+    public set direccion(direccion:string) {
         this._direccion = direccion;
     }
 
-    //metodos
 }

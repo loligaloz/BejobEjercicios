@@ -1,4 +1,4 @@
-class telefonos {
+export class telefonos {
     //propiedades
 
     private _tipo: 'fijo' | 'movil';
@@ -10,24 +10,23 @@ class telefonos {
         this._numero = numero;
     }
 
-    //acceso
-    private get tipo() {
+    
+    private get tipo():'fijo' | 'movil'{
         return this._tipo;
     }
     
-    private set tipo(tipo) {
+    private set tipo(tipo:'fijo' | 'movil') {
         this._tipo = tipo;
     }
     
-    private get numero() {
+    private get numero():number {
         return this._numero;
     }
     
-    private set numero(numero) {
+    private set numero(numero:number) {
         this._numero = numero;
     }
 
-    //Metodos
 }
 
 
