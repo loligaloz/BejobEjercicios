@@ -141,5 +141,41 @@ console.log("Datos Agenda antes de cambios");
 console.log(datosEzequiel);
 console.log(datosMarta);
 console.log(datosAzucena);
+console.log(datosAzucena);
+
+const agendaUsuarios: Array<Persona> = new Array(datosEzequiel, datosMarta, datosAzucena);
+
+const dniBuscar: string = "07411191R";
+
+const personaEditada: Persona = agendaUsuarios.find(persona => persona.dni === dniBuscar) as Persona;
+
+const nuevoMail = new mails (
+    "personal",
+    "martinez.azu.85@gmail.com"
+)
+
+const nuevaDireccion = new direccion (
+    "Avenida la riba",
+    5,
+    1,
+    "A",
+    40450,
+    "Nava de la Asuncion",
+    "Segovia"
+)
+
+const nuevoTelefono = new telefonos (
+    "fijo",
+    912583247
+)
 
 
+personaEditada.añadimosNuevaDireccion(nuevaDireccion);
+personaEditada.añadimosNuevoMail(nuevoMail);
+personaEditada.añadimosNuevoTelefono(nuevoTelefono);
+
+
+console.log("Datos Agenda despues de cambios");
+console.log(datosEzequiel);
+console.log(datosMarta);
+console.log(datosAzucena);

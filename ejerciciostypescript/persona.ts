@@ -120,5 +120,16 @@ export class Persona {
     }
 
 
-   // nuevoTelefono()
+    añadimosNuevoTelefono(telefono:telefonos) {
+        this._telefonos.push(telefono)
+    }
+
+    añadimosNuevaDireccion(Direccion:direccion) {
+        this._direcciones.push(Direccion)
+    }
+
+    añadimosNuevoMail(Mail:mails) {
+        this._mails.push(Mail)
+    }
 }
+
