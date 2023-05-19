@@ -1,0 +1,63 @@
+/*-- Estilos generales --*/
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open Sans", Arial, Sans-serif;
+    font-size: 16px;
+    background-color: #e98787;
+}
+
+
+.contenedor {
+    width: 40%;
+    background-color: #965a5a;
+    padding: 30px;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 4px;
+    color: rgb(6, 15, 15);
+    border: 3px solid #332226;
+}
+
+.contenedor h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+
+.style-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 16px 0;
+    border: 2px solid #610b36;
+}
+
+
+.style-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: #e0435e;
+    color: white;
+    margin: 16px 0;
+    cursor: pointer;
+}
+
+
+.formulario_label {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+
+
