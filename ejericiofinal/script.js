@@ -1,4 +1,4 @@
-    //acceder al formulario y a los input del mismo
+//acceder al formulario y a los input del mismo
 
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll ('#formulario input');
@@ -9,7 +9,7 @@ const expresiones_Regulares = {
     apellido1: /^[a-zA-ZÀ-ÿ\s\-]+$/,
     apellido2: /^[a-zA-ZÀ-ÿ\s\-]+$/,
     login: /^[a-zA-ZÀ-ÿ\s\-]+$/,
-    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    email: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
     password: /^.{4,8}$/,
 }
 
@@ -86,7 +86,6 @@ formulario.addEventListener ('submit', function(e) {
     e.preventDefault();
 
     if (campos_form.nombre && campos_form.apellido1 && campos_form.apellido2 && campos_form.email && campos_form.login && campos_form.password) {
-        formulario.reset();
 
         document.getElementById('input_nombre').classList.remove('is-valid');
         document.getElementById('input_apellido1').classList.remove('is-valid');
@@ -102,6 +101,7 @@ formulario.addEventListener ('submit', function(e) {
         campos_form["login"] = false;
         campos_form["password"] = false;
 
+        window.location.href = 'validarformulario.php';
     } else {
         validamosInputs(expresiones_Regulares.nombre, document.getElementById('input_nombre'), 'nombre');
         validamosInputs(expresiones_Regulares.apellido1, document.getElementById('input_apellido1'), 'apellido1');
@@ -112,3 +112,4 @@ formulario.addEventListener ('submit', function(e) {
         
     }
 })
+
