@@ -47,14 +47,17 @@ $dbname = "datosregistrousuarios";
     // Verificar campos vacíos después de la verificación de duplicados
     if (empty($nombre) || empty($apellido1) || empty($apellido2) || empty($email) || empty($login) || empty($contraseña)) {
         $error_message = "Por favor, complete todos los campos.";
-    }
+    } 
+    
+
+
 
     // Si no hay errores, insertar los datos en la base de datos
     if (empty($error_message)) {
         $stmt = $conn->prepare("INSERT INTO tabla_usuarios (nombre, apellido1, apellido2, email, login, password) VALUES (?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("ssssss", $nombre, $apellido1, $apellido2, $email, $login, $contraseña);
         if ($stmt->execute()) {
-            $success_message = "Registro exitoso.";
+            $success_message = "Registro completado con éxito";
             $_SESSION['registro_exitoso'] = true;
         } else {
                $error_message = "Error al registrar los datos: " . $stmt->error;
@@ -85,21 +88,6 @@ $conn->close();
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
-    <!-- <script>
-        function mostrarLista() {
-            $.ajax({
-                url: 'resultado.php',
-                type: 'GET',
-                success: function(response) {
-                    $('#resultadoConsulta').html(response);
-                },
-            error: function() {
-                alert('Error al obtener los resultados de la consulta.');
-            }
-        });
-    
-    }
-    </script> -->
 
 
     <?php

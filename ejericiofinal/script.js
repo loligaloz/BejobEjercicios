@@ -1,115 +1,69 @@
-//acceder al formulario y a los input del mismo
+$(document).ready(function() {
+  // Obtener el formulario
+  var form = $("#formulario");
 
-const formulario = document.getElementById('formulario');
-const inputs = document.querySelectorAll ('#formulario input');
+  // Agregar el evento de envío del formulario
+  form.on("submit", function(event) {
+    // Realizar las validaciones
+    var nombre = $("#input_nombre").val();
+    var apellido1 = $("#input_apellido1").val();
+    var apellido2 = $("#input_apellido2").val();
+    var email = $("#input_email").val();
+    var login = $("#input_login").val();
+    var contraseña = $("#input_password").val();
 
-//expresiones regulares
-const expresiones_Regulares = {
-    nombre: /^[a-zA-ZÀ-ÿ\s\-]+$/, //letras y espacios, con acentos.
-    apellido1: /^[a-zA-ZÀ-ÿ\s\-]+$/,
-    apellido2: /^[a-zA-ZÀ-ÿ\s\-]+$/,
-    login: /^[a-zA-ZÀ-ÿ\s\-]+$/,
-    email: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
-    password: /^.{4,8}$/,
-}
-
-
-//comprobar si los campos de los inputs están vacíos o no
-const campos_form = {
-    nombre: false,
-    apellido1: false,
-    apellido2: false,
-    email: false,
-    login:false,
-    password: false
-}
-
-
-//validar los inputs formularios 
-
-const validarFormulario = function(e) {
-    switch (e.target.name) {
-        case 'nombre':
-            validamosInputs(expresiones_Regulares.nombre, e.target, 'nombre');
-        break;
-        case 'apellido1':
-            validamosInputs(expresiones_Regulares.apellido1, e.target, 'apellido1');
-        break;
-        case 'apellido2':
-            validamosInputs(expresiones_Regulares.apellido2, e.target, 'apellido2');
-        break;
-        case 'email':
-            validamosInputs(expresiones_Regulares.email, e.target, 'email');
-        break;
-        case 'login':
-                validamosInputs(expresiones_Regulares.login, e.target, 'login');
-        break;
-        case 'password':
-           validamosInputs(expresiones_Regulares.password, e.target, 'password');
-        break;
-            
+    // Validar campos vacíos
+    if (nombre === "" || apellido1 === "" || apellido2 === "" || email === "" || login === "" || contraseña === "") {
+      $(".valid-feedback").hide();
+      $(".invalid-feedback").show();
+      event.preventDefault(); // Detener el envío del formulario
+      return;
     }
-}
 
-//validamos los inputs
-
-const validamosInputs = function (expresiones_Regulares, input, campos) {
-
-    if (!input.value || input.value == '') {
-        document.getElementById(`input_${campos}`).classList.add(`is-invalid`);
-        document.getElementById(`input_${campos}`).classList.remove(`is-valid`);
-        campos_form[campos] = false;
-    } else if (expresiones_Regulares.test(input.value)) {
-        document.getElementById(`input_${campos}`).classList.add(`is-valid`);
-        document.getElementById(`input_${campos}`).classList.remove(`is-invalid`);
-        campos_form[campos] = true;
+    // Validar formato del correo electrónico
+    if (!isValidEmail(email)) {
+      $(".valid-feedback").hide();
+      $(".invalid-feedback").show();
+      event.preventDefault(); // Detener el envío del formulario
+      return;
     }
-    else {
-        document.getElementById(`input_${campos}`).classList.add(`is-invalid`);
-        document.getElementById(`input_${campos}`).classList.remove(`is-valid`);
-        campos_form[campos] = false;
+
+    // Validar longitud de los campos
+    if (nombre.length > 50 || apellido1.length > 50 || apellido2.length > 50 || email.length > 100 || login.length > 50 || contraseña.length < 4 || contraseña.length > 8) {
+      $(".valid-feedback").hide();
+      $(".invalid-feedback").show();
+      event.preventDefault(); // Detener el envío del formulario
+      return;
     }
-}
+  });
 
+  // Agregar eventos de escucha en los campos relevantes
+  $("#input_nombre, #input_apellido1, #input_apellido2, #input_email, #input_login, #input_password").on("input", function() {
+    validateField($(this)); // Llamar a la función de validación de campo
+  });
 
+  // Función para validar el formato del correo electrónico
+  function isValidEmail(email) {
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,4}$/;
+    return emailRegex.test(email);
+  }
 
+  // Función para validar un campo individual y actualizar las clases de retroalimentación
+  function validateField(field) {
+    var fieldValue = field.val();
+    var feedbackElement = field.siblings(".invalid-feedback");
+    var feedbackElement1 = field.siblings(".valid-feedback");
 
-inputs.forEach(function(input) {
-    input.addEventListener('keyup', validarFormulario);
-    input.addEventListener('blur', validarFormulario);
-
-})
-
-
-
-formulario.addEventListener ('submit', function(e) {
-    e.preventDefault();
-
-    if (campos_form.nombre && campos_form.apellido1 && campos_form.apellido2 && campos_form.email && campos_form.login && campos_form.password) {
-
-        document.getElementById('input_nombre').classList.remove('is-valid');
-        document.getElementById('input_apellido1').classList.remove('is-valid');
-        document.getElementById('input_apellido2').classList.remove('is-valid');
-        document.getElementById('input_email').classList.remove('is-valid');
-        document.getElementById('input_login').classList.remove('is-valid');
-        document.getElementById('input_password').classList.remove('is-valid');
-
-        campos_form["nombre"] = false;
-        campos_form["apellido1"] = false;
-        campos_form["apellido2"] = false;
-        campos_form["email"] = false;
-        campos_form["login"] = false;
-        campos_form["password"] = false;
-
-        window.location.href = 'validarformulario.php';
+    if (fieldValue === "") {
+      field.removeClass("is-valid").addClass("is-invalid");
+      feedbackElement.show();
     } else {
-        validamosInputs(expresiones_Regulares.nombre, document.getElementById('input_nombre'), 'nombre');
-        validamosInputs(expresiones_Regulares.apellido1, document.getElementById('input_apellido1'), 'apellido1');
-        validamosInputs(expresiones_Regulares.apellido2, document.getElementById('input_apellido2'), 'apellido2');
-        validamosInputs(expresiones_Regulares.email, document.getElementById('input_email'), 'email');
-        validamosInputs(expresiones_Regulares.login, document.getElementById('input_login'), 'login');
-        validamosInputs(expresiones_Regulares.password, document.getElementById('input_password'), 'password');
-        
+      field.removeClass("is-invalid").addClass("is-valid");
+      feedbackElement.hide();
+      feedbackElement1.show();
     }
-})
+  }
 
+
+
+});
